@@ -289,16 +289,10 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="">
-              <h5>Powered by</h5>
-              <img src="img/logo2-removebg-preview.png" alt="" width="50%" />
-            </div>
+            <h5>Powered by</h5>
+            <img src="img/logo2-removebg-preview.png" alt="" width="50%" />
           </div>
-          <div
-            class="col-lg-3 col-md-6 col-sm-12 mb-3"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
+          <div class="col-lg-3 col-md-6 col-6 mb-3" data-aos="fade-up" data-aos-delay="300">
             <h5 style="text-decoration: underline">Quick Links</h5>
             <p>
               <a href="#first">Home</a>
@@ -316,13 +310,10 @@
               <a href="#contact-us">Contact Us</a>
             </p>
           </div>
-          <div
-            class="col-lg-3 col-md-6 col-sm-12 mb-3"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
+          <div class="col-lg-3 col-md-6 col-6 mb-3" data-aos-delay="400" 
+            data-aos="fade-up">
             <div class="contact-us-footer">
-              <h5 class="" style="text-decoration: underline">Contact Us</h5>
+              <h5 style="text-decoration: underline">Contact Us</h5>
               <div>
                 <p>
                   <a href="mailto: Ayobami@thefootballthemedgameshow.com"
@@ -360,7 +351,7 @@
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <div class="subscribe">
+            <div class="subscribe w-100">
               <p>SUBSCRIBE</p>
               <input
                 placeholder="Your e-mail"
@@ -419,6 +410,21 @@
         () => (document.getElementById('preloader').style.display = 'none'),
         3000
       );
+    </script>
+    <script>
+      const navLinks = document.querySelectorAll('.nav-item');
+      const menuToggle = document.getElementById('navbarSupportedContent');
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menuToggle, {
+        toggle: false,
+      });
+      navLinks.forEach((l) => {
+        if (menuToggle.classList.contains('show')) {
+          // only fire on mobile
+          l.addEventListener('click', () => {
+            bsCollapse.toggle();
+          });
+        }
+      });
     </script>
   </body>
 </html>
